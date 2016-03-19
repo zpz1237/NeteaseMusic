@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E49a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Xn-0O-cQw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NeteaseCloudMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6VX-pd-yhN">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="iconfont-tinggeshiqu" id="Ju8-fH-47P">
+                            <inset key="imageInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="W6y-cM-Fa9">
+                            <rect key="frame" x="64.5" y="5.5" width="468.5" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="搜索音乐、歌词、电台" translatesAutoresizingMaskIntoConstraints="NO" id="bFr-PI-PqG">
+                                    <rect key="frame" x="0.0" y="0.0" width="468.5" height="33"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="bFr-PI-PqG" secondAttribute="trailing" id="I0d-2Y-PDJ"/>
+                                <constraint firstItem="bFr-PI-PqG" firstAttribute="leading" secondItem="W6y-cM-Fa9" secondAttribute="leading" id="KsE-Cq-s4c"/>
+                                <constraint firstAttribute="bottom" secondItem="bFr-PI-PqG" secondAttribute="bottom" id="hw3-M6-9iv"/>
+                                <constraint firstItem="bFr-PI-PqG" firstAttribute="top" secondItem="W6y-cM-Fa9" secondAttribute="top" id="pKz-10-Yop"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" image="iconfont-yinle" id="geU-St-YRE">
+                            <inset key="imageInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="music" destination="geU-St-YRE" id="CJd-OK-ULO"/>
+                        <outlet property="surroundings" destination="Ju8-fH-47P" id="36a-2h-tWa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2233" y="402"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cbk-hP-ulL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Xn-0O-cQw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRK-l7-lwA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="weL-er-FJA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5U-i9-eUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421" y="402"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconfont-tinggeshiqu" width="30" height="30"/>
+        <image name="iconfont-yinle" width="30" height="30"/>
+    </resources>
 </document>

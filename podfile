@@ -1,0 +1,2 @@
+use_frameworks!
+pod 'SnapKit', '~> 0.19.1'

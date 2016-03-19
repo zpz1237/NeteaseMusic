@@ -1,0 +1,2 @@
+/Users/mango/Library/Developer/Xcode/DerivedData/NeteaseCloudMusic-agdbtfwttbltkhfupttfcdbyryyp/Build/Products/Debug-iphonesimulator/NeteaseCloudMusic.app
+
