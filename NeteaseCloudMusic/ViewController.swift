@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var surroundings: UIBarButtonItem!
-    @IBOutlet weak var music: UIBarButtonItem!
+    var surroundings = UIBarButtonItem()
+    var music = UIBarButtonItem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +19,11 @@ class ViewController: UIViewController {
         surroundings.image = UIImage(named: "iconfont-tinggeshiqu")?.imageWithRenderingMode(.AlwaysOriginal)
         music.image = UIImage(named: "iconfont-yinle")?.imageWithRenderingMode(.AlwaysOriginal)
         
-        self.navigationItem.titleView?.frame.origin.x = 0
+        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
+        negativeSpacer.width = -8
         
+        self.navigationItem.leftBarButtonItems = [negativeSpacer, surroundings]
+        self.navigationItem.rightBarButtonItems = [negativeSpacer, music]
     }
 
     override func didReceiveMemoryWarning() {

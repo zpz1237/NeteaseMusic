@@ -20,15 +20,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="6VX-pd-yhN">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="iconfont-tinggeshiqu" id="Ju8-fH-47P">
-                            <inset key="imageInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="W6y-cM-Fa9">
-                            <rect key="frame" x="64.5" y="5.5" width="468.5" height="33"/>
+                            <rect key="frame" x="20" y="5.5" width="560" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="搜索音乐、歌词、电台" translatesAutoresizingMaskIntoConstraints="NO" id="bFr-PI-PqG">
-                                    <rect key="frame" x="0.0" y="0.0" width="468.5" height="33"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="560" height="33"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                             </subviews>
@@ -40,14 +37,7 @@
                                 <constraint firstItem="bFr-PI-PqG" firstAttribute="top" secondItem="W6y-cM-Fa9" secondAttribute="top" id="pKz-10-Yop"/>
                             </constraints>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" image="iconfont-yinle" id="geU-St-YRE">
-                            <inset key="imageInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="music" destination="geU-St-YRE" id="CJd-OK-ULO"/>
-                        <outlet property="surroundings" destination="Ju8-fH-47P" id="36a-2h-tWa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,8 +62,4 @@
             <point key="canvasLocation" x="1421" y="402"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="iconfont-tinggeshiqu" width="30" height="30"/>
-        <image name="iconfont-yinle" width="30" height="30"/>
-    </resources>
 </document>
