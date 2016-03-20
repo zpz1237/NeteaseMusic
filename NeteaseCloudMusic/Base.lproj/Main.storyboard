@@ -16,7 +16,7 @@
                     <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6VX-pd-yhN">
                         <nil key="title"/>
@@ -26,6 +26,7 @@
                             <subviews>
                                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="搜索音乐、歌词、电台" translatesAutoresizingMaskIntoConstraints="NO" id="bFr-PI-PqG">
                                     <rect key="frame" x="0.0" y="0.0" width="560" height="33"/>
+                                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                             </subviews>
