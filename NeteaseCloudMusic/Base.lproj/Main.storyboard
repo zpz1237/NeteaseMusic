@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E49a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Xn-0O-cQw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E64a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Xn-0O-cQw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -43,6 +43,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2233" y="402"/>
+        </scene>
+        <!--Personalize View Controller-->
+        <scene sceneID="5rK-xB-Lba">
+            <objects>
+                <viewController storyboardIdentifier="PersonalizeVC" id="17e-iv-wAR" customClass="PersonalizeViewController" customModule="NeteaseCloudMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="343-v9-Qxp"/>
+                        <viewControllerLayoutGuide type="bottom" id="vhG-Os-rnh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8gq-dy-mgK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.34983672690000001" green="0.61470970660000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Opg-qn-uTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2937" y="148"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="rb0-NB-avh">
+            <objects>
+                <viewController storyboardIdentifier="ListVC" id="pCC-ii-rXv" customClass="ListViewController" customModule="NeteaseCloudMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K0w-5i-gys"/>
+                        <viewControllerLayoutGuide type="bottom" id="VaK-UU-8h7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jeC-Fu-xZT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BE1-Kv-weW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3627" y="148"/>
+        </scene>
+        <!--Broadcast View Controller-->
+        <scene sceneID="M9X-W8-w3Z">
+            <objects>
+                <viewController storyboardIdentifier="BroadcastVC" id="iIW-R8-Cn5" customClass="BroadcastViewController" customModule="NeteaseCloudMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oay-zM-Lfl"/>
+                        <viewControllerLayoutGuide type="bottom" id="bMN-kO-YIL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k2X-Ou-S3p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkb-Qg-kte" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2937" y="862"/>
+        </scene>
+        <!--Top View Controller-->
+        <scene sceneID="wqy-eI-gEH">
+            <objects>
+                <viewController storyboardIdentifier="TopVC" id="U0H-rF-00P" customClass="TopViewController" customModule="NeteaseCloudMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NLa-eb-fJx"/>
+                        <viewControllerLayoutGuide type="bottom" id="b4v-Eu-LOe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i9P-ve-SmS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OW8-dK-Ur5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3627" y="862"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cbk-hP-ulL">
