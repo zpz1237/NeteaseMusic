@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     
     private let surroundings = UIBarButtonItem()
     private let music = UIBarButtonItem()
-    private var pageView: CAPSPageMenu?
+    var pageView: CAPSPageMenu?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.translucent = true
         addLeftAndRightBarButtonItem()
         hideNavBarHairLineImageView()
         addPageMenu()
@@ -37,6 +37,9 @@ class ViewController: UIViewController {
         let parameters = offerCAPSPageMenuOptionsAccordingToNumber(array.count)
         
         pageView = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 64.0, self.view.frame.width, self.view.frame.height-64), pageMenuOptions: parameters)
+        
+        self.addChildViewController(pageView!)
+        self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(pageView!.view)
     }
     
@@ -56,11 +59,11 @@ class ViewController: UIViewController {
             .ScrollMenuBackgroundColor(UIColor(red: 248.0/255.0, green: 248.0/255.0, blue: 248.0/255.0, alpha: 1.0)),
             .ViewBackgroundColor(UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 1.0)),
             .BottomMenuHairlineColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 0.1)),
-            .SelectionIndicatorColor(UIColor(red: 206.0/255.0, green: 42.0/255.0, blue: 33.0/255.0, alpha: 1.0)),
+            .SelectionIndicatorColor(UIColor.mainColor()),
             .MenuMargin(menuMargin),
             .MenuHeight(39.0),
             .MenuItemWidth(menuItemWidth),
-            .SelectedMenuItemLabelColor(UIColor(red: 206.0/255.0, green: 42.0/255.0, blue: 33.0/255.0, alpha: 1.0)),
+            .SelectedMenuItemLabelColor(UIColor.mainColor()),
             .UnselectedMenuItemLabelColor(UIColor(red: 40.0/255.0, green: 40.0/255.0, blue: 40.0/255.0, alpha: 1.0)),
             .MenuItemFont(UIFont(name: "HelveticaNeue", size: 15.0)!),
             .UseMenuLikeSegmentedControl(false),
@@ -124,11 +127,11 @@ class ViewController: UIViewController {
         surroundings.image = UIImage(named: "iconfont-tinggeshiqu")?.imageWithRenderingMode(.AlwaysOriginal)
         music.image = UIImage(named: "iconfont-yinle")?.imageWithRenderingMode(.AlwaysOriginal)
         
-        surroundings.target = self
-        music.target = self
+//        surroundings.target = self
+//        music.target = self
 
-        surroundings.action = "clickedLeftBarButtonItem"
-        music.action = "clickedRightBarButtonItem"
+        surroundings.action = #selector(ViewController.clickedLeftBarButtonItem)
+        music.action = #selector(ViewController.clickedRightBarButtonItem)
         
         let negativeSpacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FixedSpace, target: nil, action: nil)
         negativeSpacer.width = -8

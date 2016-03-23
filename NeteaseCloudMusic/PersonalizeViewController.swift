@@ -9,11 +9,21 @@
 import UIKit
 
 class PersonalizeViewController: UIViewController {
-
+    
+    var cycleScrollView: SDCycleScrollView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cycleScrollView = SDCycleScrollView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200) , shouldInfiniteLoop: true, imageNamesGroup: ["placeHolder", "placeHolder", "placeHolder", "placeHolder", "placeHolder"])
+        cycleScrollView.bannerImageViewContentMode = .ScaleAspectFill
+        cycleScrollView.currentPageDotColor = UIColor.mainColor()
+        tableView.tableHeaderView = cycleScrollView
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +42,15 @@ class PersonalizeViewController: UIViewController {
     }
     */
 
+}
+
+extension PersonalizeViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }
